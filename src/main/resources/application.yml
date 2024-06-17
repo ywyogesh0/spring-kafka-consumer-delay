@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: consumerdelay
+
+  profiles:
+    active: local
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  kafka:
+    consumer:
+      application-id: consumerdelay
+      bootstrap-servers: localhost:9092
